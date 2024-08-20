@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Api", "BookStore.Api\BookStore.Api.csproj", "{727478A6-FDAB-4CE5-BB7A-543BDBA8AECD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Api", "BookStore.Api\BookStore.Api.csproj", "{DEF29E10-E6FC-4216-B1DC-B4D9642F5E06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{D61C7816-0768-4745-8FA5-31C7B4FF0235}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{EEAF05BE-DA11-4AF8-BAAD-E72E50C87C41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{845692DC-03AF-4FDE-881E-1E115DD2C483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{4AF70764-6D57-4240-B9F7-6F5212C22B33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Infrastructure", "BookStore.Infrastructure\BookStore.Infrastructure.csproj", "{94B41A7E-ABC3-4E43-B50B-206A801B6579}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Infrastructure", "BookStore.Infrastructure\BookStore.Infrastructure.csproj", "{23AE24BB-A264-4201-85A6-8D26B412A33C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,21 +20,21 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{727478A6-FDAB-4CE5-BB7A-543BDBA8AECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{727478A6-FDAB-4CE5-BB7A-543BDBA8AECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{727478A6-FDAB-4CE5-BB7A-543BDBA8AECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{727478A6-FDAB-4CE5-BB7A-543BDBA8AECD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D61C7816-0768-4745-8FA5-31C7B4FF0235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D61C7816-0768-4745-8FA5-31C7B4FF0235}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D61C7816-0768-4745-8FA5-31C7B4FF0235}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D61C7816-0768-4745-8FA5-31C7B4FF0235}.Release|Any CPU.Build.0 = Release|Any CPU
-		{845692DC-03AF-4FDE-881E-1E115DD2C483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{845692DC-03AF-4FDE-881E-1E115DD2C483}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{845692DC-03AF-4FDE-881E-1E115DD2C483}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{845692DC-03AF-4FDE-881E-1E115DD2C483}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94B41A7E-ABC3-4E43-B50B-206A801B6579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94B41A7E-ABC3-4E43-B50B-206A801B6579}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94B41A7E-ABC3-4E43-B50B-206A801B6579}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94B41A7E-ABC3-4E43-B50B-206A801B6579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF29E10-E6FC-4216-B1DC-B4D9642F5E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF29E10-E6FC-4216-B1DC-B4D9642F5E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF29E10-E6FC-4216-B1DC-B4D9642F5E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF29E10-E6FC-4216-B1DC-B4D9642F5E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAF05BE-DA11-4AF8-BAAD-E72E50C87C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAF05BE-DA11-4AF8-BAAD-E72E50C87C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAF05BE-DA11-4AF8-BAAD-E72E50C87C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAF05BE-DA11-4AF8-BAAD-E72E50C87C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF70764-6D57-4240-B9F7-6F5212C22B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF70764-6D57-4240-B9F7-6F5212C22B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF70764-6D57-4240-B9F7-6F5212C22B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF70764-6D57-4240-B9F7-6F5212C22B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23AE24BB-A264-4201-85A6-8D26B412A33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23AE24BB-A264-4201-85A6-8D26B412A33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23AE24BB-A264-4201-85A6-8D26B412A33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23AE24BB-A264-4201-85A6-8D26B412A33C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
