@@ -17,6 +17,13 @@ namespace BookStore.Api.Controllers
             _mediator = mediator;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllBooks()
+        {
+            var result = await _mediator.Send(new GetAllBooksQuery());
+            return Ok(result);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBookById(string id)
         {
