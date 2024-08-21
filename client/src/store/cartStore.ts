@@ -54,7 +54,7 @@ export const useCartStore = create<CartStore>((set) => ({
     updateQuantity: (id, quantity) => set((state) => ({
         cartItems: state.cartItems.map(item =>
             item.id === id
-                ? { ...item, quantity: Math.max(1, quantity) } // Ensure quantity is at least 1
+                ? { ...item, quantity: Math.max(1, quantity) }
                 : item
         )
     })),
