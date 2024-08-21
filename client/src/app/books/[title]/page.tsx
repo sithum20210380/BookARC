@@ -2,13 +2,17 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useBookStore } from '@/store/bookStore';
+import { Book, useBookStore } from '@/store/bookStore';
+import { useCartStore } from '@/store/cartStore';
 import { Tabs, rem } from '@mantine/core';
+import { useRouter } from 'next/navigation';
 import BookCard from '@/components/Home/bookCard/page';
 
 const BookDetails = () => {
     const selectedBook = useBookStore((state) => state.selectedBook);
     const books = useBookStore((state) => state.books);
+    const addToCart = useCartStore((state) => state.addToCart) as unknown as (book: Book) => void;
+    const router = useRouter();
 
     if (!selectedBook) {
         return <div className="container mx-auto p-8 ">No book selected.</div>;
@@ -18,6 +22,11 @@ const BookDetails = () => {
     const relatedBooks = books
         .filter(book => book.id !== selectedBook.id)
         .slice(0, 4);
+
+    const handleAddToCart = () => {
+        //addToCart(selectedBook);
+        router.push('/cart');
+    };
 
     return (
         <div className="container mx-auto p-8">
@@ -56,7 +65,7 @@ const BookDetails = () => {
                     </div>
                     <div>
                         <button className="bg-green-500 text-sm text-black px-4 py-2 rounded-md mr-2">Buy now</button>
-                        <button className="bg-neutral-200 text-sm text-black px-4 py-2 rounded-md">Add to cart</button>
+                        <button className="bg-neutral-200 text-sm text-black px-4 py-2 rounded-md" onClick={handleAddToCart}>Add to cart</button>
                     </div>
                     <div className='text-sm text-gray-500 mt-6'>
                         Life time Access

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const TopHeader: React.FC = () => {
     return (
-        <div className="container mx-auto p-12 mt-8 rounded-xl flex items-center bg-white justify-between flex-col gap-6 bg-stone-100">
+        <div className="container mx-auto p-12 mt-8 rounded-xl flex items-center bg-white justify-between flex-col gap-6 bg-zinc-100">
             <div>
                 <span className="text-sm text-gray-600 flex">
                     <span className='mr-2'>
