@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
     return (
@@ -60,8 +61,9 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="bg-gray-800 text-white py-4">
-                <div className="container mx-auto text-center">
-                    <p>Powered by <span className="text-blue-500">Stripe</span></p>
+                <div className="flex container mx-auto justify-between items-center">
+                    <p className='text-sm'>©  Ref Hub - All Rights Reserved</p>
+                    <Image src="/stripFooter.png" alt="cart" width={250} height={20} />
                 </div>
             </div>
         </footer>
