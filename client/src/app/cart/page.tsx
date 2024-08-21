@@ -2,10 +2,12 @@
 import React from 'react';
 import { useCartStore } from '@/store/cartStore';
 import TopHeader from '@/components/Home/topHeader/page';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Table, Button, Group, Input } from '@mantine/core';
 
 const CartPage: React.FC = () => {
+    const router = useRouter();
     const { cartItems, updateQuantity, removeFromCart } = useCartStore((state) => ({
         cartItems: state.cartItems,
         updateQuantity: state.updateQuantity,
@@ -23,6 +25,10 @@ const CartPage: React.FC = () => {
     const getTotal = () => {
         return cartItems.reduce((total, item) => total + parseFloat(item.price.replace('$', '')) * item.quantity, 0);
     };
+
+    const handleCheckout = () => {
+        router.push('/cart/checkout');
+    }
 
     if (cartItems.length === 0) {
         return <div className="container mx-auto p-8">Your cart is empty.</div>;
@@ -111,7 +117,7 @@ const CartPage: React.FC = () => {
                             <p className="text-gray-600 text-xs">Shipping & taxes calculated at checkout</p>
                         </div>
 
-                        <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded">Proceed to checkout</button>
+                        <button onClick={handleCheckout} className="mt-4 bg-green-500 text-white px-4 py-2 rounded">Proceed to checkout</button>
                     </div>
                 </div>
             </div>

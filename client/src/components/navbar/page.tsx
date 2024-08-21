@@ -18,7 +18,9 @@ const Navbar: React.FC = () => {
                     <Link href="/about" className="text-gray-600 hover:text-green-500">About</Link>
                     <Link href="/contact" className="text-gray-600 hover:text-green-500">Contact</Link>
                     <Image src="/search.png" alt="search" width={20} height={20} />
-                    <Image src="/cart.png" alt="cart" width={20} height={20} />
+                    <Link href="/cart">
+                        <Image src="/cart.png" alt="cart" width={20} height={20} />
+                    </Link>
                     <button className="border border-gray-300 rounded-xl px-4 py-2 text-black bg-gray-200">Sign In</button>
                     <button className="bg-green-500 text-black rounded-xl px-4 py-2">Register</button>
                 </div>

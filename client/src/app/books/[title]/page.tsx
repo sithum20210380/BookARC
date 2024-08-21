@@ -28,6 +28,10 @@ const BookDetails = () => {
         router.push('/cart');
     };
 
+    const handleBuyNow = () => {
+        router.push('/cart/checkout');
+    }
+
     return (
         <div className="container mx-auto p-8">
             <span className="text-sm text-gray-600 flex mb-8">
@@ -64,7 +68,7 @@ const BookDetails = () => {
                         </p>
                     </div>
                     <div>
-                        <button className="bg-green-500 text-sm text-black px-4 py-2 rounded-md mr-2">Buy now</button>
+                        <button className="bg-green-500 text-sm text-black px-4 py-2 rounded-md mr-2" onClick={handleBuyNow}>Buy now</button>
                         <button className="bg-neutral-200 text-sm text-black px-4 py-2 rounded-md" onClick={handleAddToCart}>Add to cart</button>
                     </div>
                     <div className='text-sm text-gray-500 mt-6'>
