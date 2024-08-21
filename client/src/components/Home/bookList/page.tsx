@@ -1,8 +1,9 @@
 "use client";
 import { RangeSlider } from '@mantine/core';
-import { useBookStore, Book } from '@/store/bookStore';
+import { useBookStore } from '@/store/bookStore';
 import { useRangeStore } from '@/store/range';
 import BookCard from '@/components/Home/bookCard/page';
+import { useEffect, useState } from 'react';
 
 const BookList: React.FC = () => {
     const {
@@ -14,17 +15,36 @@ const BookList: React.FC = () => {
         currentPage,
         booksPerPage,
         setCurrentPage,
+        fetchBooks
     } = useBookStore();
     const { range, setRange } = useRangeStore();
+    const [loading, setLoading] = useState(true);
 
     const handleRangeChange = (newRange: [number, number]) => {
         setRange(newRange);
     };
 
-    const filteredBooks = books.filter(book => (selectedRating ? book.rating === selectedRating : true));
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            await fetchBooks();
+            setLoading(false);
+        };
+
+        if (books.length === 0) {
+            fetchData();
+        } else {
+            setLoading(false);
+        }
+    }, [books, fetchBooks]);
+
+    const filteredBooks = books.filter(book =>
+        (selectedCategory ? book.category?.includes(selectedCategory) : true) &&
+        (selectedRating ? book.rating === selectedRating : true)
+    );
     const indexOfLastBook = currentPage * booksPerPage;
     const indexOfFirstBook = indexOfLastBook - booksPerPage;
-    const currentBooks = filteredBooks.slice(indexOfFirstBook, indexOfLastBook);
+    const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
     const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
 
     return (
@@ -131,11 +151,15 @@ const BookList: React.FC = () => {
                 </div>
 
                 <div className="w-3/4 grid grid-cols-3 gap-4">
-                    {currentBooks
-                        .filter(book => (selectedRating ? book.rating === selectedRating : true))
-                        .map((book, index) => (
+                    {loading ? (
+                        <div className="col-span-3 text-center">
+                            <span>Loading...</span>
+                        </div>
+                    ) : (
+                        currentBooks.map((book, index) => (
                             <BookCard key={index} book={book} />
-                        ))}
+                        ))
+                    )}
                 </div>
 
             </div>
