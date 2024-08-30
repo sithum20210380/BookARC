@@ -1,6 +1,6 @@
-# 📚 Ref-Hub Practical Assessment
+# 📚 BookARC - Online Book-Store
 
-This repository contains the source code for the full-stack web application developed as part of the practical assessment. The application is designed for browsing, searching, and purchasing books. It includes both a frontend built with Next.js and TypeScript, and a backend built with .NET 8, following the CQRS design pattern and microservice architecture.
+This repository contains the source code for the full-stack web application developed for a online book store. The application is designed for browsing, searching, and purchasing books. It includes both a frontend built with Next.js and TypeScript, and a backend built with .NET 8, following the CQRS design pattern and microservice architecture.
 
 ## 🗂 Table of Contents
 
@@ -56,7 +56,7 @@ This project is a full-stack web application designed for an e-commerce platform
    ```
 4. Open your browser and navigate to http://localhost:3000 to view the application.
 
-### Frontend Setup
+### Backend Setup
 1. Navigate to the backend directory:
    ```bash
    cd ../server
