@@ -1,6 +1,6 @@
 # 📚 BookARC - Online Book-Store
 
-This repository contains the source code for the full-stack web application developed for a online book store. The application is designed for browsing, searching, and purchasing books. It includes both a frontend built with Next.js and TypeScript, and a backend built with .NET 8, following the CQRS design pattern and microservice architecture.
+This repository contains the source code for the full-stack web application developed for a online book store. The application is designed for browsing, searching, and purchasing books. It includes both a frontend built with Next.js and TypeScript, and a backend built with .NET 8, following the CQRS design pattern and microservice architecture. 
 
 ## 🗂 Table of Contents
 
